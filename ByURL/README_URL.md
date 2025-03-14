@@ -56,13 +56,3 @@ pip install ultralytics opencv-python numpy
   ```python
   results = model(frame_rgb, conf=0.02, iou=0.5)
   ```
-
-## 🎯 Summary
-✅ **Install Python & dependencies**  
-✅ **Find and use a working video stream URL**  
-✅ **Run the detection script**  
-✅ **Analyze detected vehicles in real time**  
-
----
-
-💡 **Developed using Python, OpenCV, and YOLOv8.**
