@@ -39,21 +39,21 @@ pip install ultralytics opencv-python numpy
 
 ### **Step 4: Prepare an MP4 Video**
 - Place your MP4 video in the same directory as the script.
-- Rename it to **`video.mp4`** or update the script with your file’s name.
+- Rename it to **`video1.mp4`** or update the script with your file’s name.
 
 ## 📌 Running the Script
 
-1. **Save the Python script** as `vehicle_recognition_mp4.py`.
+1. **Save the Python script** as `videofile.py`.
 2. **Run the script**:
    ```bash
-   python3 vehicle_recognition_mp4.py
+   python3 videofile.py
    ```
 3. **Press 'q' to exit** the detection window.
 
 ## 📌 Troubleshooting
 
 ### ❌ **Issue: "Could not open video file."**
-- Ensure **`video.mp4`** exists in the same directory.
+- Ensure **`video1.mp4`** exists in the same directory.
 - If using another file, update `video_path = "your_video.mp4"` in the script.
 
 ### ❌ **Issue: Bounding Boxes Not Showing**
@@ -66,18 +66,5 @@ pip install ultralytics opencv-python numpy
   results = model(frame_rgb, conf=0.02, iou=0.5)
   ```
 
-## 🎯 Summary
-✅ **Install Python & dependencies**  
-✅ **Set up a virtual environment**  
-✅ **Download or prepare an MP4 video**  
-✅ **Run the detection script**  
-✅ **Analyze the detected vehicles in real time**  
 
-### ⏭ Next Steps
-1️⃣ **Test detection on your video**  
-2️⃣ If detection **isn’t accurate**, I can help **fine-tune YOLO for better results**.  
-3️⃣ Want to **train a custom model** on specific vehicles? Let me know! 🚀  
-
----
-
-💡 **Developed using Python, OpenCV, and YOLOv8.**
+**Developed using Python, OpenCV, and YOLOv8.**
