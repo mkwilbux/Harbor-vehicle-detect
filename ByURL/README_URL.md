@@ -1,58 +1,106 @@
-# 🚀 Vehicle Recognition Using a Video Stream URL (YOLOv8)
+# 🚗 Live Vehicle Detection from Embedded Stream
 
-This project detects vehicles in a **live video stream** using **YOLOv8 and OpenCV**.
+This script uses YOLOv8 and Selenium to detect vehicles (cars, buses, trucks, motorbikes) from a live embedded webcam stream via a headless browser. Results are displayed live in an OpenCV window with bounding boxes.
 
-## 📌 Installation Guide
+---
 
-### **Step 1: Install Python (If Not Installed)**
-Ensure you have **Python 3.8+** installed. Check your Python version:
+## 📦 Requirements
 
-```bash
-python3 --version
-```
+- Python 3.8+
+- Google Chrome (installed)
+- ChromeDriver (matching your Chrome version)
+- YOLOv8 model file (`yolov8m.pt`) from Ultralytics
 
-If you don’t have it, [download Python](https://www.python.org/downloads/) and install it.
-
-### **Step 2: Install Required Dependencies**
-Run the following command to install OpenCV, YOLO, and other necessary libraries:
+### Install Python dependencies
 
 ```bash
-pip install ultralytics opencv-python numpy
+pip install opencv-python numpy ultralytics selenium
 ```
 
-### **Step 3: Find a Direct Video Stream URL**
-1. Open the **traffic camera or live video page** in Chrome.
-2. Press **F12** to open **Developer Tools**.
-3. Go to the **Network tab** → Click **Media**.
-4. Refresh the page (`Ctrl + R` or `Cmd + R`).
-5. Look for a video file ending in **.m3u8, .mp4, or .mjpg**.
-6. **Copy the URL** and test it in a browser.
+---
 
-## 📌 Running the Script
+## 🔧 Setup
 
-1. **Save the Python script** as `vehicle_recognition_url.py`.
-2. **Replace `YOUR_EXTRACTED_URL`** in the script with your video URL.
-3. **Run the script**:
+1. **Download YOLOv8 Model**
+
    ```bash
-   python3 vehicle_recognition_url.py
+   wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt
    ```
-4. **Press 'q' to exit** the detection window.
 
-## 📌 Troubleshooting
+2. **Install ChromeDriver**
 
-### ❌ **Issue: "Could not open video stream."**
-- Ensure the **URL is correct** and works in a browser.
-- Try **using a different format** by running:
-  ```bash
-  yt-dlp -g "URL_HERE"
-  ```
+   Make sure ChromeDriver matches your Chrome browser version.
 
-### ❌ **Issue: Bounding Boxes Not Showing**
-- Try using a **larger YOLO model**:
-  ```python
-  model = YOLO("yolov8x.pt")
-  ```
-- Lower the confidence threshold:
-  ```python
-  results = model(frame_rgb, conf=0.02, iou=0.5)
-  ```
+   - To check:
+     ```bash
+     chromedriver --version
+     ```
+
+   - On Debian/Ubuntu:
+     ```bash
+     sudo apt install chromium-chromedriver
+     ```
+
+---
+
+## ▶️ Run the Script
+
+```bash
+python detect_stream.py
+```
+
+> Replace `detect_stream.py` with your actual script filename.
+
+The script will:
+
+- Launch a headless browser
+- Open the stream from the embedded video
+- Capture live screenshots
+- Use YOLOv8 to detect vehicles in real time
+- Display the result via OpenCV
+
+---
+
+## 📺 Stream Source
+
+Currently configured to use:
+
+```
+https://civplus.tikiliveapi.com/embed?scheme=embedChannel&channelId=2016&autoplay=yes&showChat=yes
+```
+
+Change the `URL` in the script to switch to a different video source.
+
+---
+
+## ⚙️ Configurable Options
+
+| Variable | Description |
+|----------|-------------|
+| `MODEL_PATH` | Path to your YOLOv8 model |
+| `VALID_CLASSES` | Set of vehicle types to detect |
+| `EXCLUDED_CLASSES` | Objects to ignore |
+| `FPS` | Frame capture rate for detection |
+
+---
+
+## 🛑 Exiting
+
+Press **`q`** in the OpenCV display window to quit the script and close the browser cleanly.
+
+---
+
+## 💡 Notes
+
+- No need for `.m3u8` or `.mp4` direct video links. This script works with JavaScript-based embedded streams.
+- Can be extended to:
+  - Record clips
+  - Stream annotated video via Flask
+  - Broadcast to platforms like YouTube using FFmpeg
+
+---
+
+## 🧩 Troubleshooting
+
+- If the video fails to load, try removing `--headless` in the script to watch the browser behavior.
+- Ensure ChromeDriver is compatible with your Chrome browser version.
