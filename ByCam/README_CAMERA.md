@@ -1,8 +1,8 @@
-# 🚀 Vehicle Recognition Using Webcam or External Camera (YOLOv8)
+# Vehicle Recognition Using Webcam or External Camera (YOLOv8)
 
 This project detects vehicles **in real-time using a webcam** or an **external camera** with **YOLOv8 and OpenCV**.
 
-## 📌 Installation Guide
+## Installation Guide
 
 ### **Step 1: Install Python (If Not Installed)**
 Ensure you have **Python 3.8+** installed. Check your Python version:
@@ -38,16 +38,16 @@ If **False**, check your **camera connection or try using `cv2.VideoCapture(1)`*
    ```
 3. **Press 'q' to exit** the detection window.
 
-## 📌 Troubleshooting
+## Troubleshooting
 
-### ❌ **Issue: "Could not open webcam."**
+### **Issue: "Could not open webcam."**
 - Ensure your **webcam is connected** and working.
 - Try changing `cv2.VideoCapture(0)` to:
   ```python
   cap = cv2.VideoCapture(1)  # Use external camera
   ```
 
-### ❌ **Issue: Bounding Boxes Not Showing**
+### **Issue: Bounding Boxes Not Showing**
 - Try using a **larger YOLO model**:
   ```python
   model = YOLO("yolov8x.pt")
