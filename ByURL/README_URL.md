@@ -1,10 +1,10 @@
-# 🚗 Live Vehicle Detection from Embedded Stream
+# Live Vehicle Detection from Embedded Stream
 
 This script uses YOLOv8 and Selenium to detect vehicles (cars, buses, trucks, motorbikes) from a live embedded webcam stream via a headless browser. Results are displayed live in an OpenCV window with bounding boxes.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.8+
 - Google Chrome (installed)
@@ -19,7 +19,7 @@ pip install opencv-python numpy ultralytics selenium
 
 ---
 
-## 🔧 Setup
+## Setup
 
 1. **Download YOLOv8 Model**
 
@@ -43,7 +43,7 @@ pip install opencv-python numpy ultralytics selenium
 
 ---
 
-## ▶️ Run the Script
+## Run the Script
 
 ```bash
 python detect_stream.py
@@ -61,7 +61,7 @@ The script will:
 
 ---
 
-## 📺 Stream Source
+## Stream Source
 
 Currently configured to use:
 
@@ -84,13 +84,13 @@ Change the `URL` in the script to switch to a different video source.
 
 ---
 
-## 🛑 Exiting
+##  Exiting
 
 Press **`q`** in the OpenCV display window to quit the script and close the browser cleanly.
 
 ---
 
-## 💡 Notes
+## Notes
 
 - No need for `.m3u8` or `.mp4` direct video links. This script works with JavaScript-based embedded streams.
 - Can be extended to:
@@ -100,7 +100,7 @@ Press **`q`** in the OpenCV display window to quit the script and close the brow
 
 ---
 
-## 🧩 Troubleshooting
+## Troubleshooting
 
 - If the video fails to load, try removing `--headless` in the script to watch the browser behavior.
 - Ensure ChromeDriver is compatible with your Chrome browser version.
