@@ -29,7 +29,7 @@ python -c "import cv2; print(cv2.VideoCapture(0).isOpened())"
 
 If **False**, check your **camera connection or try using `cv2.VideoCapture(1)`**.
 
-## 📌 Running the Script
+## Running the Script
 
 1. **Save the Python script** as `vehiclerec-cam.py`.
 2. **Run the script**:
