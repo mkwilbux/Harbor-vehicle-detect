@@ -1,8 +1,8 @@
-# 🚀 Vehicle Recognition Using YOLOv8 (MP4 Video)
+# Vehicle Recognition Using YOLOv8 (MP4 Video)
 
 This project detects vehicles in an **MP4 video** using **YOLOv8 and OpenCV**.
 
-## 📌 Installation Guide
+## nstallation Guide
 
 ### **Step 1: Install Python (If Not Installed)**
 Ensure you have **Python 3.8+** installed. Check your Python version:
@@ -50,13 +50,13 @@ pip install ultralytics opencv-python numpy
    ```
 3. **Press 'q' to exit** the detection window.
 
-## 📌 Troubleshooting
+## Troubleshooting
 
-### ❌ **Issue: "Could not open video file."**
+### **Issue: "Could not open video file."**
 - Ensure **`video1.mp4`** exists in the same directory.
 - If using another file, update `video_path = "your_video.mp4"` in the script.
 
-### ❌ **Issue: Bounding Boxes Not Showing**
+### **Issue: Bounding Boxes Not Showing**
 - Try using a **larger YOLO model**:
   ```python
   model = YOLO("yolov8x.pt")
