@@ -6,4 +6,4 @@ Try this:
 2. Take video of cars. Name it video1.mp4   Place in root directory.
 3. Use your desktop or picam to capture video.
 
-https://wearenorwich.org/wp-content/uploads/2025/03/202503132338-a.mp4
+
