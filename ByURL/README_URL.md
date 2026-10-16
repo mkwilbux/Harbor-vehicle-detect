@@ -73,7 +73,7 @@ Change the `URL` in the script to switch to a different video source.
 
 ---
 
-## ⚙️ Configurable Options
+## Configurable Options
 
 | Variable | Description |
 |----------|-------------|
