@@ -2,7 +2,7 @@
 
 This project detects vehicles in an **MP4 video** using **YOLOv8 and OpenCV**.
 
-## nstallation Guide
+## Installation Guide
 
 ### **Step 1: Install Python (If Not Installed)**
 Ensure you have **Python 3.8+** installed. Check your Python version:
