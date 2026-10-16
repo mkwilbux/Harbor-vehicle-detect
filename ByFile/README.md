@@ -41,7 +41,7 @@ pip install ultralytics opencv-python numpy
 - Place your MP4 video in the same directory as the script.
 - Rename it to **`video1.mp4`** or update the script with your file’s name.
 
-## 📌 Running the Script
+## Running the Script
 
 1. **Save the Python script** as `videofile.py`.
 2. **Run the script**:
